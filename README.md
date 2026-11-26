@@ -41,7 +41,14 @@ FoodieHub/
 
 ## 👩‍💻 Developer
 
-Created as a Beginner Web Development Project.
+**Name:** Simran Lal
+
+**Course:** Bachelor of Computer Applications (BCA)
+
+**Project:** Online Food Ordering System
+
+**GitHub:** [simranlal369-cpu](https://github.com/simranlal369-cpu)
+
 
 ## 📌 Project Type
 
