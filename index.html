@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieHub | Online Food Ordering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#" class="logo">Foodie<span>Hub.</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#menu">Menu</a>
+        </nav>
+
+        <button class="cart-button" id="cartButton">
+            🛒 Cart <span id="cartCount">0</span>
+        </button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="tagline">DELICIOUS FOOD, DELIVERED FAST</span>
+            <h1>Hungry? Let’s <span>Order</span> Your Favourite Food!</h1>
+            <p>
+                Discover delicious meals from our menu and
+                get them delivered straight to your doorstep.
+            </p>
+            <a href="#menu" class="primary-button">Explore Food</a>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800"
+                alt="Delicious pizza">
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" id="categories">
+        <div class="section-heading">
+            <div>
+                <span class="small-heading">EXPLORE</span>
+                <h2>Food Categories</h2>
+            </div>
+        </div>
+
+        <div class="categories" id="categoryList">
+            <button class="category active" data-category="All">🍽️ All</button>
+            <button class="category" data-category="Pizza">🍕 Pizza</button>
+            <button class="category" data-category="Burger">🍔 Burger</button>
+            <button class="category" data-category="Biryani">🍛 Biryani</button>
+            <button class="category" data-category="Chinese">🍜 Chinese</button>
+            <button class="category" data-category="Dessert">🍰 Dessert</button>
+        </div>
+    </section>
+
+    <!-- FOOD MENU -->
+    <section class="section menu-section" id="menu">
+        <div class="section-heading menu-heading">
+            <div>
+                <span class="small-heading">OUR MENU</span>
+                <h2>Popular Dishes</h2>
+                <p>Choose your favourite food and enjoy!</p>
+            </div>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="🔍 Search food...">
+        </div>
+
+        <div class="food-grid" id="foodGrid"></div>
+    </section>
+
+    <!-- CART SIDEBAR -->
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>My Cart 🛒</h2>
+            <button class="close-button" id="closeCart">✕</button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Subtotal</span>
+                <strong id="subtotal">₹0</strong>
+            </div>
+
+            <div class="total-row">
+                <span>Delivery Fee</span>
+                <strong id="deliveryFee">₹0</strong>
+            </div>
+
+            <div class="total-row grand-total">
+                <span>Total</span>
+                <strong id="grandTotal">₹0</strong>
+            </div>
+
+            <button class="checkout-button" id="checkoutButton">
+                Proceed to Checkout
+            </button>
+        </div>
+    </aside>
+
+    <!-- CHECKOUT MODAL -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <button class="close-button modal-close" id="closeModal">✕</button>
+
+            <div id="checkoutFormArea">
+                <span class="small-heading">ALMOST THERE!</span>
+                <h2>Complete Your Order</h2>
+
+                <form id="orderForm">
+                    <label for="customerName">Full Name</label>
+                    <input type="text" id="customerName"
+                        placeholder="Enter your name" required>
+
+                    <label for="customerPhone">Phone Number</label>
+                    <input type="tel" id="customerPhone"
+                        placeholder="10-digit mobile number"
+                        pattern="[0-9]{10}" maxlength="10" required>
+
+                    <label for="customerAddress">Delivery Address</label>
+                    <textarea id="customerAddress"
+                        placeholder="Enter your full address"
+                        required></textarea>
+
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod">
+                        <option value="Cash on Delivery">Cash on Delivery</option>
+                    </select>
+
+                    <div class="checkout-total">
+                        Total Amount: <strong id="checkoutTotal">₹0</strong>
+                    </div>
+
+                    <button type="submit" class="checkout-button">
+                        Place My Order
+                    </button>
+                </form>
+            </div>
+
+            <div id="successMessage" class="success-message" hidden>
+                <div class="success-icon">✓</div>
+                <h2>Order Placed Successfully!</h2>
+                <p>Thank you for ordering with FoodieHub.</p>
+                <p id="orderDetails"></p>
+                <button class="primary-button" id="continueShopping">
+                    Continue Shopping
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>Foodie<span>Hub.</span></h2>
+        <p>Good food. Good mood. Delivered with love ❤️</p>
+        <p>© 2026 FoodieHub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
