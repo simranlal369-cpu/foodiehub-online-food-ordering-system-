@@ -53,3 +53,9 @@ FoodieHub/
 ## 📌 Project Type
 
 Frontend Web Development
+
+## 📸 Project Screenshots
+
+### Homepage
+
+![FoodieHub Homepage](foodiehub-homepage.png.webp)
